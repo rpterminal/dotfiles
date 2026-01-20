@@ -1,35 +1,13 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
-    "spacing": 4,
-    "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "tray"],
+    "height": 22, // Reduced from 34 for a much cleaner profile
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 4, 
 
-    "hyprland/workspaces": {
-        "format": "{name}",
-        "on-click": "activate"
-    },
-    "clock": {
-        "format": "{:%H:%M | %d/%m}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-    },
-    "cpu": { "format": "CPU {usage}%" },
-    "memory": { "format": "RAM {}%" },
-    "pulseaudio": {
-        "format": "VOL {volume}%",
-        "format-muted": "MUTED",
-        "on-click": "pavucontrol"
-    },
-    "battery": {
-        "format": "BAT {capacity}%",
-        "format-charging": "CHG {capacity}%",
-        "format-plugged": "FULL {capacity}%"
-    },
-    "network": {
-        "format-wifi": "WIFI",
-        "format-ethernet": "ETH",
-        "format-disconnected": "OFFLINE"
-    }
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "clock", "tray"]
 }

@@ -9,15 +9,16 @@ configuration {
 }
 
 * {
-    /* Nuanced Palette */
-    bg-col:  #1a1a1a;        /* Deep Charcoal background */
+    /* Nuanced Palette - Deepened for better contrast */
+    bg-col: #0f0f0f;         /* Darker charcoal for a true dark mode */
+    bg-alt: #1a1a1a;        /* Lighter charcoal for subtle depth */
     border-col: #333333;    /* Slate Gray border */
-    selected-col: #333333;  /* Slate Gray for selection */
+    selected-col: #444444;  /* Slightly lighter gray for active rows */
     fg-col: #e0e0e0;        /* Soft White text */
-    accent-col: #a0a0a0;    /* Silver accent */
+    accent-col: #a0a0a0;    /* Silver accent for the prompt */
     
-    background-color: @bg-col;
-    border: 0;
+    background-color: transparent; /* Allows transparency if Hyprland blur is on */
+    text-color: @fg-col;
     margin: 0;
     padding: 0;
     spacing: 0;
@@ -25,59 +26,71 @@ configuration {
 
 window {
     width: 450px;
-    border: 2px;
+    border: 1px;            /* Thinner border for a cleaner look */
     border-color: @border-col;
     background-color: @bg-col;
+    border-radius: 8px;     /* Matches your system-wide rounded corners */
 }
 
 mainbox {
     background-color: @bg-col;
+    children: [inputbar, listview];
 }
 
 inputbar {
     children: [prompt, entry];
-    background-color: @bg-col;
-    padding: 10px;
+    background-color: @bg-alt; /* Subtle contrast for the search area */
+    padding: 12px;
+    border: 0px 0px 1px 0px;   /* Separator line under input */
+    border-color: @border-col;
 }
 
 prompt {
-    background-color: @bg-col;
+    background-color: transparent;
     padding: 0px 10px;
     text-color: @accent-col;
+    font: "IosevkaTerm Nerd Font Bold 12";
 }
 
 entry {
-    background-color: @bg-col;
+    background-color: transparent;
     text-color: @fg-col;
     placeholder: "Search...";
+    placeholder-color: #666666;
 }
 
 listview {
-    border: 0px 0px 0px;
-    padding: 6px 0px 0px;
-    margin: 10px;
+    padding: 10px;
     columns: 1;
     lines: 8;
     background-color: @bg-col;
+    fixed-height: false;
 }
 
 element {
-    padding: 8px;
-    background-color: @bg-col;
+    padding: 10px;
+    margin: 2px 0px;
+    background-color: transparent;
     text-color: @fg-col;
+    border-radius: 4px;
 }
 
 element selected {
     background-color: @selected-col;
     text-color: @fg-col;
-    border-radius: 4px;
+    /* Optional: Silver border for the selection to make it "pop" */
+    border: 0px 0px 0px 4px;
+    border-color: @accent-col;
 }
 
 element-icon {
     size: 24px;
     padding: 0 10px 0 0;
+    background-color: transparent;
 }
 
 element-text {
     vertical-align: 0.5;
+    background-color: transparent;
+    text-color: inherit;
 }

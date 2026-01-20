@@ -30,6 +30,7 @@ export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 eval "$(tmuxifier init -)"
 
 alias c='clear'
+alias cl='clear && fastfetch'
 alias v='nvim'
 alias nv='nvim'
 alias vim='nvim'
@@ -51,3 +52,6 @@ function y() {
     [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
     rm -f -- "$tmp"
 }
+
+clear
+fastfetch

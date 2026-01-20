@@ -1,39 +1,46 @@
+/* Using your preferred IosevkaTerm Nerd Font */
 * {
-  font-family: "IosevkaTerm Nerd Font", monospace;
-  font-size: 14px;
+  font-family: "IosevkaTerm Nerd Font";
+  font-size: 11px;
+  /* Smaller font for a cleaner look */
+  font-weight: bold;
 }
 
 window#waybar {
-  background-color: rgba(26, 26, 26, 0.85);
-  /* Nuanced Deep Charcoal */
-  border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+  background-color: rgba(26, 26, 26, 0.5);
+  /* Nuanced Charcoal with subtle transparency */
   color: #e0e0e0;
-  /* Soft White */
+  /* Soft Silver/White text */
+  border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+  /* Very thin slate separator */
 }
 
 #workspaces button {
-  color: #666666;
-  /* Muted Gray */
+  padding: 0 4px;
+  color: #a0a0a0;
+  /* Dimmed silver for inactive */
 }
 
 #workspaces button.active {
-  color: #e0e0e0;
-  border-bottom: 2px solid #a0a0a0;
+  color: #ffffff;
+  /* Pure white for active workspace */
+  background: transparent;
 }
 
+/* Remove backgrounds from modules to create a single clean line */
 #clock,
+#battery,
 #cpu,
 #memory,
-#battery,
-#pulseaudio,
 #network,
-#tray {
-  color: #a0a0a0;
-  /* Muted Silver */
+#pulseaudio,
+#tray,
+#window {
+  padding: 0 10px;
+  background: transparent;
 }
 
-#window {
-  color: #888888;
-  /* Darker gray for window title */
-  font-style: italic;
+/* Optional: Add a subtle silver highlight to the clock */
+#clock {
+  color: #a0a0a0;
 }
