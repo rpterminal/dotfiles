@@ -9,14 +9,10 @@ export XDG_STATE_HOME="$HOME/.local/state"
 
 # --- Variáveis de Usuário ---
 export EDITOR="nvim"
-export BROWSER="firefox" # Ou seu navegador de preferência
+export BROWSER="zen-browser" # Ou seu navegador de preferência
 
 # --- PATH ---
 # Adiciona pastas locais ao PATH
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PNPM_HOME:$PATH"
 export PATH="$HOME/.tmuxifier/bin:$PATH"
-
-# --- Fix para Cedilha (UFRN/ABNT2) ---
-export GTK_IM_MODULE=cedilla
-export QT_IM_MODULE=cedilla
