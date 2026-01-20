@@ -1,0 +1,36 @@
+configuration {
+    font: "IosevkaTerm Nerd Font 12";
+}
+
+* {
+    bg-col:  #1a1a1a;
+    border-col: #333333;
+    selected-col: #333333;
+    fg-col: #e0e0e0;
+    
+    background-color: @bg-col;
+    text-color: @fg-col;
+}
+
+window {
+    width: 250px;
+    border: 2px;
+    border-color: @border-col;
+    location: center;
+    anchor: center;
+}
+
+listview {
+    lines: 4;
+    padding: 10px;
+    spacing: 5px;
+}
+
+element {
+    padding: 10px;
+    border-radius: 4px;
+}
+
+element selected {
+    background-color: @selected-col;
+}

@@ -1,0 +1,39 @@
+* {
+  font-family: "IosevkaTerm Nerd Font", monospace;
+  font-size: 14px;
+}
+
+window#waybar {
+  background-color: rgba(26, 26, 26, 0.85);
+  /* Nuanced Deep Charcoal */
+  border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+  color: #e0e0e0;
+  /* Soft White */
+}
+
+#workspaces button {
+  color: #666666;
+  /* Muted Gray */
+}
+
+#workspaces button.active {
+  color: #e0e0e0;
+  border-bottom: 2px solid #a0a0a0;
+}
+
+#clock,
+#cpu,
+#memory,
+#battery,
+#pulseaudio,
+#network,
+#tray {
+  color: #a0a0a0;
+  /* Muted Silver */
+}
+
+#window {
+  color: #888888;
+  /* Darker gray for window title */
+  font-style: italic;
+}

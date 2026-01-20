@@ -1,0 +1,83 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    display-drun: "APPS";
+    display-run: "RUN";
+    display-window: "WINDOW";
+    drun-display-format: "{name}";
+    font: "IosevkaTerm Nerd Font 12";
+}
+
+* {
+    /* Nuanced Palette */
+    bg-col:  #1a1a1a;        /* Deep Charcoal background */
+    border-col: #333333;    /* Slate Gray border */
+    selected-col: #333333;  /* Slate Gray for selection */
+    fg-col: #e0e0e0;        /* Soft White text */
+    accent-col: #a0a0a0;    /* Silver accent */
+    
+    background-color: @bg-col;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 450px;
+    border: 2px;
+    border-color: @border-col;
+    background-color: @bg-col;
+}
+
+mainbox {
+    background-color: @bg-col;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: @bg-col;
+    padding: 10px;
+}
+
+prompt {
+    background-color: @bg-col;
+    padding: 0px 10px;
+    text-color: @accent-col;
+}
+
+entry {
+    background-color: @bg-col;
+    text-color: @fg-col;
+    placeholder: "Search...";
+}
+
+listview {
+    border: 0px 0px 0px;
+    padding: 6px 0px 0px;
+    margin: 10px;
+    columns: 1;
+    lines: 8;
+    background-color: @bg-col;
+}
+
+element {
+    padding: 8px;
+    background-color: @bg-col;
+    text-color: @fg-col;
+}
+
+element selected {
+    background-color: @selected-col;
+    text-color: @fg-col;
+    border-radius: 4px;
+}
+
+element-icon {
+    size: 24px;
+    padding: 0 10px 0 0;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
