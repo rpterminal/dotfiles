@@ -1,0 +1,106 @@
+[[manager.prepend_keymap]]
+on   = [ "v" ]
+run  = "plugin relative-motions"
+desc = "relative motions"
+
+[[manager.prepend_keymap]]
+on   = [ "C" ]
+run  = "plugin chmod"
+desc = "change permissions"
+
+[[manager.prepend_keymap]]
+on   = [ "S" ]
+run  = "plugin sudo"
+desc = "open in sudo"
+
+# chmod.yazi
+[[manager.prepend_keymap]]
+on   = [ "c", "m" ]
+run  = "plugin chmod"
+desc = "Chmod on selected files"
+
+# convert.yazi
+[[mgr.prepend_keymap]]
+on = ["c", "p"]
+run = "plugin convert -- --extension='png'"
+desc = "Convert selected files to PNG"
+
+# bypass.yazi
+[[mgr.prepend_keymap]]
+on = [ "l" ]
+run = "plugin bypass smart-enter"
+desc = "Open a file, or recursively enter child directory, skipping children with only a single subdirectory"
+
+[[mgr.prepend_keymap]]
+on = ["c", "j"]
+run = "plugin convert -- --extension='jpg'"
+desc = "Convert selected files to JPG"
+
+[[mgr.prepend_keymap]]
+on = ["c", "w"]
+run = "plugin convert -- --extension='webp'"
+desc = "Convert selected files to WebP"
+
+# eza-preview.yazi
+[[mgr.prepend_keymap]]
+on = [ "E" ]
+run = "plugin eza-preview"
+desc = "Toggle tree/list dir preview"
+
+# fast-enter.yazi
+[[mgr.prepend_keymap]]
+on   = [ "l" ]
+run  = "plugin fast-enter"
+desc = "Enter the subfolder faster, or open the file directly"
+
+# lazygit.yazi
+[[mgr.prepend_keymap]]
+on   = [ "g", "i" ]
+run  = "plugin lazygit"
+desc = "run lazygit"
+
+# relative motions
+[[mgr.prepend_keymap]]
+on = [ "1" ]
+run = "plugin relative-motions 1"
+desc = "Move in relative steps"
+
+[[mgr.prepend_keymap]]
+on = [ "2" ]
+run = "plugin relative-motions 2"
+desc = "Move in relative steps"
+
+[[mgr.prepend_keymap]]
+on = [ "3" ]
+run = "plugin relative-motions 3"
+desc = "Move in relative steps"
+
+[[mgr.prepend_keymap]]
+on = [ "4" ]
+run = "plugin relative-motions 4"
+desc = "Move in relative steps"
+
+[[mgr.prepend_keymap]]
+on = [ "5" ]
+run = "plugin relative-motions 5"
+desc = "Move in relative steps"
+
+[[mgr.prepend_keymap]]
+on = [ "6" ]
+run = "plugin relative-motions 6"
+desc = "Move in relative steps"
+
+[[mgr.prepend_keymap]]
+on = [ "7" ]
+run = "plugin relative-motions 7"
+desc = "Move in relative steps"
+
+[[mgr.prepend_keymap]]
+on = [ "8" ]
+run = "plugin relative-motions 8"
+desc = "Move in relative steps"
+
+[[mgr.prepend_keymap]]
+on = [ "9" ]
+run = "plugin relative-motions 9"
+desc = "Move in relative steps"

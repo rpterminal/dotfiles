@@ -1,22 +1,23 @@
 configuration {
-    modi: "drun,run,window";
+    modi: "drun,run";
     show-icons: true;
-    display-drun: "APPS";
+    // We replace the text 'APPS' with a minimalist magnifying glass icon
+    display-drun: " "; 
     drun-display-format: "{name}";
-    font: "IosevkaTerm Nerd Font 12";
+    font: "IosevkaTerm Nerd Font 11"; /* Slightly smaller font for precision */
 }
 
-@theme "/dev/null" 
+@theme "/dev/null"
 
 * {
-    /* Nuanced Palette */
     bg: #0f0f0f;
-    bg-alt: #1a1a1a;
+    bg-alt: #161616;
     fg: #e0e0e0;
-    accent: #a0a0a0;
-    border-col: #333333; /* Renamed to avoid conflict with 'border' property */
+    fg-alt: #707070;
+    accent: #ffffff;
+    border-col: #222222;
     
-    background-color: @bg;
+    background-color: transparent;
     text-color: @fg;
     margin: 0;
     padding: 0;
@@ -24,10 +25,11 @@ configuration {
 }
 
 window {
-    width: 450px;
+    width: 400px;
     border: 1px;
     border-color: @border-col;
-    border-radius: 12px;
+    border-radius: 10px;
+    background-color: @bg;
 }
 
 mainbox {
@@ -41,45 +43,40 @@ inputbar {
 }
 
 prompt {
-    background-color: transparent;
-    text-color: @accent;
-    padding: 0 10px;
+    text-color: @fg-alt; 
+    padding: 0 8px 0 0;
 }
 
 entry {
-    background-color: transparent;
     text-color: @fg;
+    placeholder: "Search..."; 
+    placeholder-color: @fg-alt;
 }
 
 listview {
-    padding: 10px;
-    lines: 8;
-    background-color: @bg;
+    padding: 8px;
+    lines: 6;
+    scrollbar: false;
 }
 
 element {
-    padding: 8px;
-    background-color: transparent;
+    padding: 6px 10px;
+    margin: 2px 0;
     border-radius: 6px;
 }
 
 element selected {
-    /* Subtle slate selection background */
-    background-color: @border-col; 
-    text-color: @fg;
-    /* 2px Silver accent on the left */
-    border: 0px 0px 0px 2px;  
-    border-color: @accent;
+    background-color: rgba(255, 255, 255, 0.05); 
+    text-color: @accent; 
+    border: 0px; 
 }
 
 element-icon {
-    size: 24px;
+    size: 20px;
     padding: 0 10px 0 0;
-    background-color: transparent;
 }
 
 element-text {
     vertical-align: 0.5;
     text-color: inherit;
-    background-color: transparent;
 }

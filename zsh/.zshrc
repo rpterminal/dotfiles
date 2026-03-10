@@ -27,9 +27,15 @@ export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 
 eval "$(tmuxifier init -)"
 
+# exports
 export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
+export PAGER="bat"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
+# aliases
+alias cat='bat --style=plain --paging=never'
+alias preview='bat --style=numbers --color=always'
 alias c='clear'
 alias cff='clear && fastfetch'
 alias v='nvim'
