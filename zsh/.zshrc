@@ -32,6 +32,7 @@ export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
 export PAGER="bat"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=12'
 
 # aliases
 alias cat='bat --style=plain --paging=never'
@@ -46,6 +47,7 @@ alias fastfetch='fastfetch --config ~/.config/fastfetch/config.jsonc'
 alias ff='fastfetch --config ~/.config/fastfetch/config.jsonc'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias hypr-start='~/dotfiles/bin/hypr-start.sh'
 if command -v eza > /dev/null; then
     alias l='eza -l --icons --git -a'
     alias lt='eza --tree --level=2 --icons'
