@@ -16,4 +16,4 @@ export SDL_VIDEODRIVER=wayland
 export CLUTTER_BACKEND=wayland
 
 # Start the engine
-exec Hyprland
+exec start-hyprland
