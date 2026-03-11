@@ -10,10 +10,13 @@
     "modules-left": [],
     "modules-center": [
         "hyprland/workspaces",
+        "cpu",
+        "memory",
         "custom/caffeine",
         "clock",
         "pulseaudio",
         "battery",
+        "network",
         "tray"
     ],
     "modules-right": [],
@@ -21,13 +24,6 @@
     "hyprland/workspaces": {
         "format": "{name}",
         "on-click": "activate"
-    },
-
-    "custom/caffeine": {
-        "format": "{}",
-        "exec": "if pgrep -x hypridle > /dev/null; then echo '󰈈 '; else echo '󰈉 '; fi",
-        "interval": 2,
-        "on-click": "~/.config/waybar/scripts/caffeine.sh"
     },
 
     "clock": {
@@ -38,17 +34,31 @@
             "format": {
                 "today": "<span color='#fAfBfC'><b>{}</b></span>"
             }
-        },
-        "actions": {
-            "on-click-right": "shift_down",
-            "on-click": "shift_up"
         }
+    },
+
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪",
+        "on-click": "hyprctl dispatch exec \"[float; size 550 450; center] kitty -e nmtui\""
+    },
+
+    "cpu": { "format": "󰍛 {usage}%", "interval": 2 },
+    "memory": { "format": "󰘚 {percentage}%", "interval": 2 },
+
+    "custom/caffeine": {
+        "format": "{}",
+        "exec": "if pgrep -x hypridle > /dev/null; then echo '󰈈 '; else echo '󰈉 '; fi",
+        "interval": 2,
+        "on-click": "~/.config/waybar/scripts/caffeine.sh"
     },
 
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-muted": "󰝟",
-        "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] }
+        "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+        "on-click": "hyprctl dispatch exec \"[float; size 700 400; center] kitty -e pulsemixer\""
     },
 
     "battery": {
@@ -56,8 +66,5 @@
         "format-icons": ["󰂎", "󰁺", "󰁹"]
     },
 
-    "tray": { 
-        "icon-size": 15, 
-        "spacing": 8 
-    }
+    "tray": { "icon-size": 15, "spacing": 10 }
 }
