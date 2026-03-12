@@ -50,7 +50,7 @@ alias ...='cd ../..'
 alias hypr-start='~/dotfiles/bin/hypr-start.sh'
 if command -v eza > /dev/null; then
     alias l='eza -l --icons --git -a'
-    alias lt='eza --tree --level=2 --icons'
+    alias ll='eza --tree --level=2 --icons'
 fi
 
 function y() {
