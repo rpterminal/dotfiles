@@ -1,21 +1,21 @@
 configuration {
     modi: "drun,run";
-    show-icons: true;
-    // We replace the text 'APPS' with a minimalist magnifying glass icon
-    display-drun: " "; 
+    show-icons: true; 
+    display-drun: "❯ "; 
+    display-run: " ";
     drun-display-format: "{name}";
-    font: "IosevkaTerm Nerd Font 11"; /* Slightly smaller font for precision */
+    font: "IosevkaTerm Nerd Font 11"; 
 }
 
 @theme "/dev/null"
 
 * {
-    bg: #0f0f0f;
-    bg-alt: #161616;
-    fg: #e0e0e0;
-    fg-alt: #707070;
+    bg: #111111;
+    bg-alt: #1a1a1a;
+    fg: #d8d8d8;
+    fg-alt: #666666;
     accent: #ffffff;
-    border-col: #222222;
+    border-col: #444444; 
     
     background-color: transparent;
     text-color: @fg;
@@ -25,10 +25,10 @@ configuration {
 }
 
 window {
-    width: 400px;
+    width: 450px;
     border: 1px;
     border-color: @border-col;
-    border-radius: 10px;
+    border-radius: 2px;
     background-color: @bg;
 }
 
@@ -40,39 +40,46 @@ inputbar {
     background-color: @bg-alt;
     children: [prompt, entry];
     padding: 12px;
+    border: 0 0 1px 0;
+    border-color: @border-col;
 }
 
 prompt {
-    text-color: @fg-alt; 
+    text-color: @accent; 
     padding: 0 8px 0 0;
+    font: "IosevkaTerm Nerd Font Bold 12";
 }
 
 entry {
     text-color: @fg;
-    placeholder: "Search..."; 
+    placeholder: "Search system..."; 
     placeholder-color: @fg-alt;
+    blink: true;
 }
 
 listview {
     padding: 8px;
-    lines: 6;
+    lines: 8;
     scrollbar: false;
+    fixed-height: true;
 }
 
 element {
     padding: 6px 10px;
     margin: 2px 0;
-    border-radius: 6px;
+    border-radius: 0px;
+    border: 0 0 0 2px;
+    border-color: transparent;
 }
 
 element selected {
-    background-color: rgba(255, 255, 255, 0.05); 
+    background-color: #1e1e1e;
     text-color: @accent; 
-    border: 0px; 
+    border-color: @accent;
 }
 
 element-icon {
-    size: 20px;
+    size: 18px;
     padding: 0 10px 0 0;
 }
 

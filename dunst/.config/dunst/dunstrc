@@ -1,20 +1,20 @@
 [global]
     font = IosevkaTerm Nerd Font 10
     
-    background = "#0f0f0fCC" 
-    foreground = "#e0e0e0"
-    frame_color = "#333333"
-    highlight = "#a0a0a0"
+    background = "#111111"
+    foreground = "#d8d8d8"
+    frame_color = "#444444"
+    highlight = "#ffffff"
     
     separator_height = 2
-    separator_color = "#333333"
+    separator_color = "#444444"
     
-    width = 280            # Slightly thinner for a more "refined" look
-    height = 110           # Lowered to match your 22px Waybar aesthetic
+    width = 280
+    height = 110
     offset = 15x15
     origin = top-right
-    corner_radius = 12     # Matches your Waybar bubble radius
-    frame_width = 1
+    corner_radius = 0
+    frame_width = 2
     
     gap_size = 10
     
@@ -28,7 +28,20 @@
     progress_bar_min_width = 150
     progress_bar_max_width = 280
 
+[urgency_low]
+    background = "#111111"
+    foreground = "#666666"
+    frame_color = "#222222"
+    timeout = 5
+
 [urgency_normal]
-    # Use silver accent for the border of active alerts
-    frame_color = "#a0a0a0"
+    background = "#111111"
+    foreground = "#d8d8d8"
+    frame_color = "#444444"
     timeout = 10
+
+[urgency_critical]
+    background = "#111111"
+    foreground = "#ffffff"
+    frame_color = "#ffffff"
+    timeout = 0
