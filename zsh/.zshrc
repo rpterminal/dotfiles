@@ -32,7 +32,7 @@ export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
 export PAGER="bat"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-# export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=12'
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # aliases
 alias cat='bat --style=plain --paging=never'
