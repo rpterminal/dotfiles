@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-ENGINE="$HOME/dotfiles/bin/grimblast_engine"
+ENGINE="$HOME/dotfiles/bin/grimblast"
 SAVE_DIR="${XDG_PICTURES_DIR:-$HOME/Pictures}/Screenshots"
 TEMP_FILE="${XDG_RUNTIME_DIR:-/tmp}/screenshot.png"
 SAVE_FILE=$(date +'%y%m%d_%Hh%Mm%Ss_screenshot.png')

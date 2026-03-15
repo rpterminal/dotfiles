@@ -47,6 +47,7 @@ alias ff='fastfetch --config ~/.config/fastfetch/config.jsonc'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias hypr-start='~/dotfiles/bin/hypr-start.sh'
+alias pkgupd='sudo pacman -Syyu && yay -Syyu'
 if command -v eza > /dev/null; then
     alias l='eza -l --icons --git -a'
     alias ll='eza --tree --level=2 --icons'
@@ -63,3 +64,5 @@ function y() {
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH=$PATH:/home/terminus/.spicetify
