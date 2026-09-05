@@ -1744,4 +1744,37 @@ die
 			})
 		end,
 	},
+	{
+		"mawkler/modicator.nvim",
+		dependencies = "bjarneo/ash.nvim",
+		init = function()
+			vim.o.cursorline = true
+			vim.o.number = true
+			vim.o.termguicolors = true
+		end,
+		opts = {
+			show_warnings = true,
+		},
+	},
+	{
+		"kevinhwang91/nvim-hlslens",
+		config = true,
+		keys = {
+			{
+				"n",
+				[[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]],
+				mode = "n",
+			},
+			{
+				"N",
+				[[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]],
+				mode = "n",
+			},
+			{ "*", [[*<Cmd>lua require('hlslens').start()<CR>]], mode = "n" },
+			{ "#", [[#<Cmd>lua require('hlslens').start()<CR>]], mode = "n" },
+			{ "g*", [[g*<Cmd>lua require('hlslens').start()<CR>]], mode = "n" },
+			{ "g#", [[g#<Cmd>lua require('hlslens').start()<CR>]], mode = "n" },
+			{ "<Leader>l", "<Cmd>noh<CR>", mode = "n", desc = "Clear search highlight" },
+		},
+	},
 }
