@@ -61,6 +61,7 @@
   "vim-projectionist": { "branch": "master", "commit": "5ff7bf79a6ef741036d2038a226bcb5f8b1cd296" },
   "vim-test": { "branch": "master", "commit": "2676d84c6901e484df00b5d728bd6a345d47ee12" },
   "vim-tmux-navigator": { "branch": "master", "commit": "e41c431a0c7b7388ae7ba341f01a0d217eb3a432" },
+  "vimtex": { "branch": "master", "commit": "e355987594cbf16283bee7b37e3aa3a65d5e1c5c" },
   "vimux": { "branch": "master", "commit": "d6cb7f63a8bb428ffc27060b7f83c77fb115589c" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" }
 }

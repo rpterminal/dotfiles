@@ -851,8 +851,11 @@ return {
 						client
 						and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_inlayHint, event.buf)
 					then
+						vim.lsp.inlay_hint.enable(true, { bufnr = event.buf })
+
 						map("<leader>th", function()
-							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
+							local is_enabled = vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf })
+							vim.lsp.inlay_hint.enable(not is_enabled, { bufnr = event.buf })
 						end, "[T]oggle Inlay [H]ints")
 					end
 				end,
@@ -888,7 +891,18 @@ return {
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
 			local servers = {
 				astro = {},
-				clangd = {},
+				clangd = {
+					settings = {
+						clangd = {
+							InlayHints = {
+								Designators = true,
+								Enabled = true,
+								ParameterNames = true,
+								DeducedTypes = true,
+							},
+						},
+					},
+				},
 				ts_ls = {},
 				html = {},
 				cssls = {
@@ -1776,5 +1790,14 @@ die
 			{ "g#", [[g#<Cmd>lua require('hlslens').start()<CR>]], mode = "n" },
 			{ "<Leader>l", "<Cmd>noh<CR>", mode = "n", desc = "Clear search highlight" },
 		},
+	},
+	{
+		"lervag/vimtex",
+		lazy = false,
+		init = function()
+			vim.g.vimtex_view_method = "zathura"
+			vim.g.vimtex_compiler_method = "latexmk"
+			vim.g.vimtex_syntax_enabled = 1
+		end,
 	},
 }
