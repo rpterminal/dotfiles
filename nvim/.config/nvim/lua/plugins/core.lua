@@ -998,6 +998,7 @@ return {
 				java = { "google-java-format" },
 				python = { "black", "isort" },
 				lua = { "stylua" },
+				vhdl = { "vsg" },
 				html = { "prettierd", "prettier", stop_after_first = true },
 				css = { "prettierd", "prettier", stop_after_first = true },
 				javascript = { "prettierd", "prettier", stop_after_first = true },
@@ -1008,7 +1009,7 @@ return {
 				json = { "prettierd", "prettier", stop_after_first = true },
 				markdown = { "prettierd", "prettier", stop_after_first = true },
 				telekasten = { "prettierd", "prettier", stop_after_first = true },
-				vhdl = { "vsg" },
+				tex = { "tex-fmt" },
 			},
 			formatters = {
 				["clang-format"] = {},
